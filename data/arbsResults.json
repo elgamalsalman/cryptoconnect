@@ -1,0 +1,446 @@
+{
+	"AAVEETH": {
+		"percentageDiff": 0.5865102639296152, "arbOpportunities": []
+	},
+	"AAVEBTC": {
+		"percentageDiff": 0.1660516605165952,
+		"arbOpportunities": []
+	},
+	"ADAETH": {
+		"percentageDiff": 0.02756339581036451,
+		"arbOpportunities": []
+	},
+	"ADAUSDT": {
+		"percentageDiff": 0.07373068432670694,
+		"arbOpportunities": []
+	},
+	"ADABTC": {
+		"percentageDiff": 0.03468609087755189,
+		"arbOpportunities": []
+	},
+	"ALGOBTC": {
+		"percentageDiff": 0.056673278549153924,
+		"arbOpportunities": [0.5952380952380943]
+	},
+	"ANKRBTC": {
+		"percentageDiff": 0.44247787610619044,
+		"arbOpportunities": [1.3333333333333393]
+	},
+	"ANTBTC": {
+		"percentageDiff": 0.26314814128461206,
+		"arbOpportunities": [
+			0.6640983305815589, 0.664025240296421, 0.8851540616246573,
+			1.017501017501012, 0.949039881831599, 0.9095614878355496
+		]
+	},
+	"ATOMBTC": {
+		"percentageDiff": 0.13577732518669713,
+		"arbOpportunities": []
+	},
+	"BALBTC": {
+		"percentageDiff": 0.14705882352941535,
+		"arbOpportunities": [
+			0.5472636815920396, 0.6477329347284526, 0.9452736318407919
+		]
+	},
+	"BATETH": {
+		"percentageDiff": 0.2907822041290986,
+		"arbOpportunities": [0.5515239477503605, 0.6980802792321129]
+	},
+	"BATBTC": {
+		"percentageDiff": 0.2925045703839094,
+		"arbOpportunities": [0.6593406593406654]
+	},
+	"BCHUSDT": {
+		"percentageDiff": 0.0518018018018059,
+		"arbOpportunities": []
+	},
+	"BCHBTC": {
+		"percentageDiff": 0.10615711252653495,
+		"arbOpportunities": []
+	},
+	"BNTBTC": {
+		"percentageDiff": 0.8498583569405115,
+		"arbOpportunities": [1.1331444759206883]
+	},
+	"COMPBTC": {
+		"percentageDiff": 0.11337868480725162,
+		"arbOpportunities": [0.6146141588891444]
+	},
+	"CRVBTC": {
+		"percentageDiff": 0.1321928460342094,
+		"arbOpportunities": [0.7715813598166478, 0.5491530667491568]
+	},
+	"DAIUSDT": {
+		"percentageDiff": "undefined",
+		"arbOpportunities": []
+	},
+	"DASHBTC": {
+		"percentageDiff": 0.23890784982935365,
+		"arbOpportunities": [0.5862068965517272]
+	},
+	"DOTETH": {
+		"percentageDiff": 0.555914673561739,
+		"arbOpportunities": [0.6981254040077599]
+	},
+	"DOTUSDT": {
+		"percentageDiff": 0.18113207547170254,
+		"arbOpportunities": [0.5426721806348043, 0.6434722700654429]
+	},
+	"DOTBTC": {
+		"percentageDiff": 0.14234875444841258,
+		"arbOpportunities": []
+	},
+	"ENJBTC": {
+		"percentageDiff": 0.17277125086384873,
+		"arbOpportunities": [
+			0.9002770083102406, 0.9150552486187786, 0.5706380771225982
+		]
+	},
+	"EOSETH": {
+		"percentageDiff": 0.11764705882353228,
+		"arbOpportunities": []
+	},
+	"EOSUSDT": {
+		"percentageDiff": 0.1944792973651117,
+		"arbOpportunities": [0.9157049673858471]
+	},
+	"EOSBTC": {
+		"percentageDiff": 0,
+		"arbOpportunities": [0.594353640416062]
+	},
+	"ETHDAI": {
+		"percentageDiff": 0.1204697331479232,
+		"arbOpportunities": []
+	},
+	"ETHUSDC": {
+		"percentageDiff": 0.11608481930797193,
+		"arbOpportunities": []
+	},
+	"ETHUSDT": {
+		"percentageDiff": 0.029635562675213653,
+		"arbOpportunities": []
+	},
+	"FILBTC": {
+		"percentageDiff": 0.14590794535085302,
+		"arbOpportunities": []
+	},
+	"FLOWBTC": {
+		"percentageDiff": 0.25667351129364074,
+		"arbOpportunities": []
+	},
+	"GNOBTC": {
+		"percentageDiff": 0.273722627737231,
+		"arbOpportunities": [0.6515837104072321, 1.0110294117646965]
+	},
+	"GRTETH": {
+		"percentageDiff": 0.2267573696145026,
+		"arbOpportunities": []
+	},
+	"GRTBTC": {
+		"percentageDiff": 0,
+		"arbOpportunities": [0.5007153075822556]
+	},
+	"ICXETH": {
+		"percentageDiff": 0.7633587786259562,
+		"arbOpportunities": [0.6717557251908395, 0.7633587786259562]
+	},
+	"ICXBTC": {
+		"percentageDiff": 0.5378409527468254,
+		"arbOpportunities": [0.5793742757821563, 0.6151480199923047]
+	},
+	"KAVABTC": {
+		"percentageDiff": 0.3728070175438598,
+		"arbOpportunities": []
+	},
+	"KEEPBTC": {
+		"percentageDiff": 0.13227513227514223,
+		"arbOpportunities": [0.8632138114209857, 0.8637873754152854]
+	},
+	"KNCETH": {
+		"percentageDiff": 0.10621348911311995,
+		"arbOpportunities": [1.270270270270272]
+	},
+	"KNCBTC": {
+		"percentageDiff": 0.2681863895407282,
+		"arbOpportunities": [
+			0.6181318681318738, 0.7155025553662797, 0.7032819825853975,
+			0.6365159128978221
+		]
+	},
+	"KSMBTC": {
+		"percentageDiff": 0.0649245252394178,
+		"arbOpportunities": []
+	},
+	"LINKETH": {
+		"percentageDiff": 0.2763437057991664,
+		"arbOpportunities": [0.599766905142448]
+	},
+	"LINKUSDT": {
+		"percentageDiff": 0.1548113207547215,
+		"arbOpportunities": [
+			0.7531909552175585, 0.5604087452471577, 0.6727587077209899
+		]
+	},
+	"LINKBTC": {
+		"percentageDiff": 0.017805475183609743,
+		"arbOpportunities": []
+	},
+	"LPTBTC": {
+		"percentageDiff": 0.17717930545712052,
+		"arbOpportunities": []
+	},
+	"LSKETH": {
+		"percentageDiff": 0.7952755905511705,
+		"arbOpportunities": []
+	},
+	"LSKBTC": {
+		"percentageDiff": 0.44418005155660617,
+		"arbOpportunities": []
+	},
+	"LTCETH": {
+		"percentageDiff": 0.025087807325647422,
+		"arbOpportunities": []
+	},
+	"LTCUSDT": {
+		"percentageDiff": 0.12479598662206623,
+		"arbOpportunities": []
+	},
+	"MANAETH": {
+		"percentageDiff": 0.19309404815992584,
+		"arbOpportunities": []
+	},
+	"MANABTC": {
+		"percentageDiff": 0.24268379728766146,
+		"arbOpportunities": []
+	},
+	"MATICBTC": {
+		"percentageDiff": 0.2802690582959583,
+		"arbOpportunities": []
+	},
+	"MINABTC": {
+		"percentageDiff": 0.2395964691046614,
+		"arbOpportunities": [1.1253196930946183, 0.7185175847724732]
+	},
+	"MKRBTC": {
+		"percentageDiff": 0.31576869942767005,
+		"arbOpportunities": [0.9741550695825136]
+	},
+	"NANOETH": {
+		"percentageDiff": 0.15075323908619967,
+		"arbOpportunities": [
+			0.676103950982457, 0.9004192872117455, 0.7257717232614621,
+			0.6376963350785274
+		]
+	},
+	"NANOBTC": {
+		"percentageDiff": 0.5392195925306077,
+		"arbOpportunities": [
+			0.7510048656653251, 0.5019762845849739, 0.5392195925306077
+		]
+	},
+	"OCEANBTC": {
+		"percentageDiff": 0.2070393374741181,
+		"arbOpportunities": [0.5690636316606345, 0.8808290155440417]
+	},
+	"OMGETH": {
+		"percentageDiff": 0.2847721822541954,
+		"arbOpportunities": []
+	},
+	"OMGBTC": {
+		"percentageDiff": 0.297261113254221,
+		"arbOpportunities": [0.6861518632245287]
+	},
+	"OXTBTC": {
+		"percentageDiff": 0.3690036900368968,
+		"arbOpportunities": []
+	},
+	"PAXGBTC": {
+		"percentageDiff": 0.07714065312420222,
+		"arbOpportunities": []
+	},
+	"QTUMETH": {
+		"percentageDiff": 0.5711954304365615,
+		"arbOpportunities": [0.5169442848937296, 0.5711954304365615]
+	},
+	"QTUMBTC": {
+		"percentageDiff": 0.25706940874035217,
+		"arbOpportunities": [0.9268795056642583]
+	},
+	"RENBTC": {
+		"percentageDiff": 0.17006802721089714,
+		"arbOpportunities": [1.4455782312925176]
+	},
+	"SANDBTC": {
+		"percentageDiff": 0.12075350185155663,
+		"arbOpportunities": []
+	},
+	"SCETH": {
+		"percentageDiff": 0.4716981132075426,
+		"arbOpportunities": [0.7109004739336424]
+	},
+	"SCBTC": {
+		"percentageDiff": 0.7705986959098944,
+		"arbOpportunities": [
+			0.9801009801009751, 2.0303030303030223, 1.462250074604595,
+			1.5454545454545332, 1.462250074604595, 1.7575757575757451,
+			1.2507444907683138, 2.1818181818181692, 0.8303677342823247,
+			2.1818181818181692, 1.1904761904761854, 1.8181818181818103,
+			1.2507444907683138, 2.2121212121212017, 0.8004743551734335,
+			2.242424242424234, 0.7705986959098944, 2.5151515151515116,
+			0.8004743551734335, 2.393939393939381, 0.8303677342823247,
+			2.242424242424234, 0.7705986959098944, 2.242424242424234,
+			0.8902077151335195, 2.12121212121212, 0.8902077151335195,
+			2.12121212121212, 0.8902077151335195, 2.12121212121212,
+			0.8902077151335195, 2.12121212121212, 0.8902077151335195,
+			2.333333333333332, 0.71090047393364, 2.3030303030302997,
+			0.7705986959098944
+		]
+	},
+	"SNXBTC": {
+		"percentageDiff": 0.07739938080495544,
+		"arbOpportunities": [
+			0.6216006216006156, 0.6191950464396225, 0.6163328197226443,
+			0.7710100231302985
+		]
+	},
+	"SOLBTC": {
+		"percentageDiff": 0.008044405116240395,
+		"arbOpportunities": []
+	},
+	"SRMBTC": {
+		"percentageDiff": 0.9833971902937347,
+		"arbOpportunities": [0.6225384322195449, 0.9833971902937347]
+	},
+	"STORJETH": {
+		"percentageDiff": "undefined",
+		"arbOpportunities": []
+	},
+	"STORJBTC": {
+		"percentageDiff": 0.3460381143430402,
+		"arbOpportunities": [
+			0.8339265737821644, 0.5045180722891573, 0.7031642390758345,
+			0.6994234143895761, 0.8285212151644452, 0.8588027279616068,
+			1.1099899091826502
+		]
+	},
+	"SUSHIBTC": {
+		"percentageDiff": 0.1029336078229567,
+		"arbOpportunities": [2.0483193277310994, 0.6728778467908926]
+	},
+	"TRXETH": {
+		"percentageDiff": 0.14598540145984437,
+		"arbOpportunities": []
+	},
+	"TRXBTC": {
+		"percentageDiff": 0.18404907975460205,
+		"arbOpportunities": [
+			0.5552128315854435, 0.6894409937888191, 0.5490099315279768,
+			0.6894409937888191, 0.6483482556344646, 0.6049382716049445,
+			0.6320181628520541
+		]
+	},
+	"UNIBTC": {
+		"percentageDiff": 0.0814774579033154,
+		"arbOpportunities": []
+	},
+	"USDCUSDT": {
+		"percentageDiff": 0,
+		"arbOpportunities": []
+	},
+	"WAVESETH": {
+		"percentageDiff": 0.06092360180333613,
+		"arbOpportunities": [0.5365229375861333]
+	},
+	"WAVESBTC": {
+		"percentageDiff": 0.2795784816737893,
+		"arbOpportunities": [0.8606278249024903]
+	},
+	"WBTCBTC": {
+		"percentageDiff": 0.0100010001000089,
+		"arbOpportunities": []
+	},
+	"BTCDAI": {
+		"percentageDiff": 0.03835367690421709,
+		"arbOpportunities": []
+	},
+	"BTCUSDC": {
+		"percentageDiff": 0.05128309541200875,
+		"arbOpportunities": [0.5500247919406863]
+	},
+	"BTCUSDT": {
+		"percentageDiff": 0.023377085110826472,
+		"arbOpportunities": []
+	},
+	"ETCETH": {
+		"percentageDiff": 0.07508312774857945,
+		"arbOpportunities": [0.6363930536080253]
+	},
+	"ETCBTC": {
+		"percentageDiff": 0,
+		"arbOpportunities": [0.540540540540539]
+	},
+	"ETHBTC": {
+		"percentageDiff": 0.002516419638141373,
+		"arbOpportunities": []
+	},
+	"LTCBTC": {
+		"percentageDiff": 0.09466708740927626,
+		"arbOpportunities": []
+	},
+	"MLNBTC": {
+		"percentageDiff": 0.04904364884748076,
+		"arbOpportunities": [0.8390918065153055, 0.8937437934458682]
+	},
+	"REPETH": {
+		"percentageDiff": 1.774193548387105,
+		"arbOpportunities": [2.3935091277890477]
+	},
+	"REPBTC": {
+		"percentageDiff": 0.6870229007633617,
+		"arbOpportunities": [1.7811704834605617]
+	},
+	"XRPETH": {
+		"percentageDiff": 0.1775410563692897,
+		"arbOpportunities": []
+	},
+	"XRPUSDT": {
+		"percentageDiff": 0.11842728564661308,
+		"arbOpportunities": []
+	},
+	"XTZBTC": {
+		"percentageDiff": 0.11157318186428365,
+		"arbOpportunities": []
+	},
+	"XLMBTC": {
+		"percentageDiff": 0.16528925619834553,
+		"arbOpportunities": []
+	},
+	"XMRBTC": {
+		"percentageDiff": 0.09417969485778482,
+		"arbOpportunities": [0.6473724295506508]
+	},
+	"XRPBTC": {
+		"percentageDiff": 0.05580357142856144,
+		"arbOpportunities": []
+	},
+	"ZECBTC": {
+		"percentageDiff": 0.28391167192428685,
+		"arbOpportunities": []
+	},
+	"YFIBTC": {
+		"percentageDiff": 0.2227171492204929,
+		"arbOpportunities": [
+			0.9067017082785831, 0.6891171499154819, 0.6751493118670452,
+			0.7683442182097586, 0.9030780971762904, 0.5903039437327212,
+			0.6772858397090129, 0.5954596203944815
+		]
+	},
+	"ZRXBTC": {
+		"percentageDiff": 0.26925148088315143,
+		"arbOpportunities": [
+			0.6482982171798966, 0.5936319481921243, 0.5425935973955455,
+			0.7038440714672466, 0.7080610021786516
+		]
+	}
+}

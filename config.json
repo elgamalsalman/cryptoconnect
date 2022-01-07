@@ -1,0 +1,18 @@
+{
+	"arbs": [
+		{
+			"symbol": "TRXBTC",
+			"isSandBox": true,
+			"exchange1": {
+				"name": "KRAKEN",
+        "baseAmount": 0.0,
+        "quoteAmount": 0.0
+			},
+			"exchange2": {
+				"name": "BINANCE",
+        "baseAmount": 0.0,
+        "quoteAmount": 0.0
+      }
+		}
+	]
+}
