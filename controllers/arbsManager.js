@@ -1,20 +1,14 @@
 import fs from "fs";
 import path from "path";
+
 import fetch from "node-fetch";
 import WebSocket from "ws";
 
 import binanceClient from "./exchanges/binanceManager.js";
 import krakenClient from "./exchanges/krakenManager.js";
 
-const launchArbs = async() => {
-	const arbsData = process.env.config.arbs;
-	console.log(arbsData);
-	for (let arbData of arbsData) {
-	}
-}
-
-const monitorArbs = async () => {
-	const commonAssetPairs = await JSON.parse(
+const monitorAssetpairs = async () => {
+	const monitoredAssetpairs = await JSON.parse(
 		fs.readFileSync(path.join(process.cwd(), "data", "commonAssetPairs.json"), {
 			encoding: "utf-8",
 		})
@@ -114,4 +108,4 @@ const monitorArbs = async () => {
 	}, 60 * 1000);
 };
 
-export { monitorArbs, launchArbs };
+export { monitorAssetpairs };

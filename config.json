@@ -14,5 +14,12 @@
         "quoteAmount": 0.0
       }
 		}
+	],
+	"assetpairs": [
+		{
+			"id": "TRXBTC",
+			"base": "TRX",
+			"quote": "BTC"
+		}
 	]
 }
