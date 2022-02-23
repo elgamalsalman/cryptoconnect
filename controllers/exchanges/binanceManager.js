@@ -4,6 +4,7 @@ import WebSocket from "ws";
 class BinanceClient {
 	constructor() {
 		this.timeout = new Promise((res, rej) => res());
+		this.ws = new WebSocket(`wss://stream.binance.com:9443/ws/stream`);
 	};
 
 	resetTimeout() {
@@ -11,6 +12,17 @@ class BinanceClient {
 			setInterval(() => res(), 1000);
 		});
 	};
+
+	formatCandle(data) {
+		return {
+			"time": parseFloat(data.t / 1000),
+			"open": parseFloat(data.o),
+			"high": parseFloat(data.h),
+			"low": parseFloat(data.l),
+			"close": parseFloat(data.c),
+			"volume": parseFloat(data.v),
+		};
+	}
 
 	async getAllSymbols() {
 		await this.timeout;

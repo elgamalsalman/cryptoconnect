@@ -1,106 +1,39 @@
-import fetch from "node-fetch";
-import WebSocket from "ws";
-import AssetpairDatabase from "../models/chart";
-
-import config from "../utils/config.json";
-import AssetpairDatabase from "../models/AssetpairDatabase.js";
+import config from "../utils/config.js";
+import Arb from "../models/arb.js";
 import binanceClient from "./exchanges/binanceManager.js";
 import krakenClient from "./exchanges/krakenManager.js";
 
-const monitorAssetpairs = async () => {
-	const monitored_assetpairs = config.assetpairs;
-
-	console.log(monitored_assetpairs);
-
-	const assetpairs_databases = monitored_assetpairs.map(assetpair => {
-		return AssetpairDatabase(assetpair, config.time_interval);
+const setupArbs = async (prices_databases) => {
+	const arbs = config.arbs.map(arbMeta => {
+		return new Arb(arbMeta, prices_databases[arbMeta.pair]);
 	});
+	return arbs;
 }
 
-const oldMonitorAssetPairs = async () => {
-	// add krakenWSNames
-	let payload = await fetch(`https://api.kraken.com/0/public/AssetPairs?pair=${commonAssetPairs.join(",")}`);
-	payload = await payload.json();
-	payload = payload.result;
-	let i = 0;
-	for (let prop in payload) {
-		arbitrages[i].krakenWSName = payload[prop].wsname;
-		i++;
-	}
+const findCommonCoins = async () => {
+  const krakenAssetPairObjects = await krakenClient.getAllSymbols();
+  const krakenAssetPairs = [];
+  for (let prop in krakenAssetPairObjects) {
+    const newSymbol =
+      krakenClient.formatSymbol(krakenAssetPairObjects[prop].base) +
+      krakenClient.formatSymbol(krakenAssetPairObjects[prop].quote);
+    krakenAssetPairs.push(newSymbol);
+  }
+  // console.log(krakenAssetPairs);
 
-	// update kraken data
-	const krakenWS = new WebSocket(`wss://ws.kraken.com/`);
-	krakenWS.on("open", () => {
-		krakenWS.send(
-			JSON.stringify({
-				event: "subscribe",
-				pair: (arbitrages.map(arb => arb.krakenWSName)),
-				subscription: {
-					name: "ohlc",
-				},
-			})
-		);
-	});
+  const binanceAssetPairObjects = await binanceClient.getAllSymbols();
+  const binanceAssetPairs = binanceAssetPairObjects.symbols.map(
+    (asset) => asset.symbol
+  );
+  // console.log(binanceAssetPairs);
 
-	krakenWS.onmessage = (event) => {
-		event = JSON.parse(event.data);
-		if (event.event === "heartbeat") return;
-		else if (Array.isArray(event)) {
-			// data
-			const channelID = event[0];
-			const close = parseFloat(event[1][5]);
-			const ind = arbitrages.findIndex(arb => arb.krakenChannelID === channelID);
-			arbitrages[ind].krakenPrice = close;
-			// <--------------UPDATE ARBITRAGE POSITION-------------->
-		} else if (event.event === "subscriptionStatus" && event.status === "subscribed"){
-			// new subscription
-			const arbInd = arbitrages.findIndex(arb => {
-				return (arb.krakenWSName === event.pair);
-			});
-			arbitrages[arbInd].krakenChannelID = event.channelID;
-		} else console.log(event);
-	};
+  const commonAssetPairs = krakenAssetPairs.filter((asset) => {
+    return binanceAssetPairs.includes(asset);
+  });
 
-	// -------------BINANCE-------------
-	// add arbitrages binanceWSName
-	for (let arb of arbitrages) {
-		arb.binanceWSName = arb.name.toLowerCase();
-	}
-
-	// update Binance data
-	const binanceWS = new WebSocket(`wss://stream.binance.com:9443/ws/stream`);
-	binanceWS.on("open", () => {
-		binanceWS.send(
-			JSON.stringify({
-				method: "SUBSCRIBE",
-				params: (arbitrages.map(arb => `${arb.binanceWSName}@kline_1m`)),
-				id: 0,
-			})
-		);
-	});
-
-	binanceWS.onmessage = (event) => {
-		event = JSON.parse(event.data);
-		if (event.e === "kline") {
-			// data
-			const symbol = event.s;
-			const close = parseFloat(event.k.c);
-			const ind = arbitrages.findIndex(arb => arb.name === symbol);
-			arbitrages[ind].binancePrice = close;
-			// <--------------UPDATE ARBITRAGE POSITION-------------->
-			updateArbPos(arbitrages[ind]);
-		} else console.log(event);
-	};
-
-	setInterval(() => {
-		console.log("-----------------------");
-		console.log("-----------------------");
-		console.log("-----------------------");
-		arbitrages.map(arb => {
-			// console.log(arb);
-			console.log(arb.name, ":", arb.arbOpportunities, ",");
-		});
-	}, 60 * 1000);
+  fs.writeFileSync(path.join(process.cwd(), "commonAssetPairs.json"), JSON.stringify(commonAssetPairs));
 };
 
-export { monitorAssetpairs };
+export {
+	setupArbs,
+}

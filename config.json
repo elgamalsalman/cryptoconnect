@@ -1,26 +1,47 @@
 {
 	"arbs": [
 		{
-			"symbol": "TRXBTC",
+			"pair": "BTCUSDT",
 			"isSandBox": true,
+			"trigger_percentage": 1.0,
 			"exchange1": {
-				"name": "KRAKEN",
-        "baseAmount": 0.0,
-        "quoteAmount": 0.0
+				"id": "KRAKEN",
+        "base_amount": 0.0,
+        "quote_amount": 0.0
 			},
 			"exchange2": {
-				"name": "BINANCE",
-        "baseAmount": 0.0,
-        "quoteAmount": 0.0
+				"id": "BINANCE",
+        "base_amount": 0.0,
+        "quote_amount": 0.0
       }
 		}
 	],
-	"assetpairs": [
+	"pairs": [
+		{
+			"id": "BTCUSDT",
+			"base": "BTC",
+			"quote": "USDT",
+			"wsnames": {
+				"BINANCE": "btcusdt",
+				"KRAKEN": "XBT/USDT"
+			}
+		},
 		{
 			"id": "TRXBTC",
 			"base": "TRX",
-			"quote": "BTC"
+			"quote": "BTC",
+			"wsnames": {
+				"BINANCE": "trxbtc",
+				"KRAKEN": "TRX/XBT"
+			}
 		}
 	],
-	"time_interval": "1m"
+	"time_interval": {
+		"symbol": "1m",
+		"seconds": 60
+	},
+	"exchanges": [
+		{ "id" : "BINANCE" },
+		{ "id" : "KRAKEN" }
+	]
 }

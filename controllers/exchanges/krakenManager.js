@@ -4,6 +4,7 @@ import WebSocket from "ws";
 class KrakenClient {
 	constructor() {
 		this.timeout = new Promise((res, rej) => res());
+		this.ws = new WebSocket(`wss://ws.kraken.com/`);
 	};
 
 	resetTimeout() {
@@ -19,6 +20,17 @@ class KrakenClient {
 		if (symbol === "XBT") symbol = "BTC";
 		return symbol;
 	};
+
+	formatCandle(data) {
+		return {
+			"time": parseFloat(data[1]),
+			"open": parseFloat(data[2]),
+			"high": parseFloat(data[3]),
+			"low": parseFloat(data[4]),
+			"close": parseFloat(data[5]),
+			"volume": parseFloat(data[7]),
+		};
+	}
 
 	async getAllSymbols() {
 		await this.timeout;
