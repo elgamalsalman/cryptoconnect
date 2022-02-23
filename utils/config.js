@@ -1,8 +1,8 @@
 import fs from "fs";
 import path from "path";
 
-const monitoredAssetpairs = await JSON.parse(
-  fs.readFileSync(path.join(process.cwd(), "data", "commonAssetPairs.json"), {
+const config = await JSON.parse(
+  fs.readFileSync(path.join(process.cwd(), "config.json"), {
     encoding: "utf-8",
   })
 );

@@ -1,28 +1,23 @@
-import fs from "fs";
-import path from "path";
-
 import fetch from "node-fetch";
 import WebSocket from "ws";
+import AssetpairDatabase from "../models/chart";
 
+import config from "../utils/config.json";
+import AssetpairDatabase from "../models/AssetpairDatabase.js";
 import binanceClient from "./exchanges/binanceManager.js";
 import krakenClient from "./exchanges/krakenManager.js";
 
 const monitorAssetpairs = async () => {
-	const monitoredAssetpairs = await JSON.parse(
-		fs.readFileSync(path.join(process.cwd(), "data", "commonAssetPairs.json"), {
-			encoding: "utf-8",
-		})
-	);
-	// const commonAssetPairs = ["SCBTC"];
+	const monitored_assetpairs = config.assetpairs;
 
-	const arbitrages = commonAssetPairs.map(pair => {
-		return {
-			name: pair,
-			arbPos: "BINANCE",
-			arbOpportunities: [],
-		};
+	console.log(monitored_assetpairs);
+
+	const assetpairs_databases = monitored_assetpairs.map(assetpair => {
+		return AssetpairDatabase(assetpair, config.time_interval);
 	});
+}
 
+const oldMonitorAssetPairs = async () => {
 	// add krakenWSNames
 	let payload = await fetch(`https://api.kraken.com/0/public/AssetPairs?pair=${commonAssetPairs.join(",")}`);
 	payload = await payload.json();

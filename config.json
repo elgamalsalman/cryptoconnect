@@ -21,5 +21,6 @@
 			"base": "TRX",
 			"quote": "BTC"
 		}
-	]
+	],
+	"time_interval": "1m"
 }
