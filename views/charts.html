@@ -8,10 +8,46 @@
 		<link rel="stylesheet" href="/css/charts.css" />
 	</head>
 	<body>
-		<h1>Cryptoconnect!</h1>
+		<nav>
+			<ul class="nav-list">
+				<li class="cc-li">
+					<img src="imgs/cc_logo_zoomed_square.png" />
+					<span class="cc_name">cryptoconnect</span>
+				</li>
+				<li class="charts-li">charts</li>
+				<li class="wallet-li">wallet</li>
+				<li class="exchanges-li">exchanges</li>
+				<li class="bots-li">bots</li>
+			</ul>
+		</nav>
 
-		<div class="chart1"></div>
-		<div class="chart2"></div>
+		<div class="grid-div">
+			<div class="cell pair-cell">
+
+			</div>
+			<div class="cell exchanges-cell">
+
+			</div>
+
+			<div class="cell prices-chart-cell">
+				<div class="prices-chart"></div>
+			</div>
+			<div class="cell performance-chart-cell">
+				<div class="performance-chart"></div>
+			</div>
+
+			<div class="cell bots-cell">
+				
+			</div>
+			<div class="cell bot-settings-cell">
+				
+			</div>
+			<div class="cell trades-cell">
+				
+			</div>
+		</div>
+
+
 
 		<script type="module" src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
 		<script type="module" src="/js/charter.js"></script>
