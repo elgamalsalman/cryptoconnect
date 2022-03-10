@@ -20,7 +20,7 @@ class PriceDatabase {
       candles.push(candle);
       this.event_emitter.emit("newCandle", {
         exchange: exchangeID,
-        candle: candle,
+        candles: [candle],
       });
       return;
     }
@@ -30,7 +30,7 @@ class PriceDatabase {
       candles[candles.length - 1] = candle;
       this.event_emitter.emit("newCandle", {
         exchange: exchangeID,
-        candle: candle,
+        candles: [candle],
       });
     } else if (candle.time > last_time) {
       const target_time = candle.time;
@@ -49,13 +49,13 @@ class PriceDatabase {
         candles.push(intermediate_candle);
         this.event_emitter.emit("newCandle", {
           exchange: exchangeID,
-          candle: intermediate_candle,
+          candles: [intermediate_candle],
         });
       }
       candles.push(candle);
       this.event_emitter.emit("newCandle", {
         exchange: exchangeID,
-        candle: candle,
+        candles: [candle],
       });
     }
   }

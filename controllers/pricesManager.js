@@ -49,7 +49,7 @@ const streamPrices = async (price_databases) => {
 			}
 			// const ind = price_databases.findIndex(db => db.pair.wsnames.KRAKEN === pairWsname);
 			price_databases[symbol].update("KRAKEN", krakenClient.formatCandle(event[1]));
-			console.log(price_databases[symbol].candles);
+			// console.log(price_databases[symbol].candles);
 		} else console.log(event);
 	};
 
@@ -76,7 +76,7 @@ const streamPrices = async (price_databases) => {
 			const symbol = event.s;
 			// const ind = price_databases.findIndex(db => db.pair.id === symbol);
 			price_databases[symbol].update("BINANCE", binanceClient.formatCandle(event.k));
-			console.log(price_databases[symbol].candles);
+			// console.log(price_databases[symbol].candles);
 		} else console.log(event);
 	};
 }

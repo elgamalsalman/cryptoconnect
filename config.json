@@ -1,7 +1,11 @@
 {
+	"env": {
+		"port": 3000,
+		"wss_port": 8080
+	},
 	"arbs": [
 		{
-			"pair": "BTCUSDT",
+			"pair": "TRXBTC",
 			"isSandBox": true,
 			"trigger_percentage": 1.0,
 			"exchange1": {

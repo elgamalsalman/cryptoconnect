@@ -13,18 +13,18 @@ class Arb {
 
 		price_database.onNewCandle(data => {
 			if (data.exchange === this.exchange1.id || data.exchange === this.exchange2.id) {
-				this.updateExchangePrice(data.exchange, data.candle);
+				this.updateExchangePrice(data.exchange, data.candles);
 				this.updateArbPos();
 			}
 		});
   }
 
-	updateExchangePrice = (exchangeID, candle) => {
+	updateExchangePrice = (exchangeID, candles) => {
 		console.log(`arb percentage_diff : ${this.percentage_diff}`);
 		if (this.exchange1.id === exchangeID) {
-			this.exchange1.price = candle.close;
+			this.exchange1.price = candles[candles.length - 1].close;
 		} else if (this.exchange2.id === exchangeID) {
-			this.exchange2.price = candle.close;
+			this.exchange2.price = candles[candles.length - 1].close;
 		}
 
     if (this.exchange1.price === undefined || this.exchange2.price === undefined) return;
