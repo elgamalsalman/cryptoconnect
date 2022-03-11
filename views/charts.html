@@ -4,29 +4,179 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<title>cryptoconnect</title>
+		<link rel="icon" href="imgs/favicon.png" />
 		<link rel="stylesheet" href="/css/main.css" />
 		<link rel="stylesheet" href="/css/charts.css" />
 	</head>
+
 	<body>
-		<nav>
+		<div class="bg-effects">
+			<div class="bg-effect"></div>
+			<div class="bg-effect"></div>
+			<div class="bg-effect"></div>
+		</div>
+
+		<nav class="main-nav">
 			<ul class="nav-list">
-				<li class="cc-li">
-					<img src="imgs/cc_logo_zoomed_square.png" />
-					<span class="cc_name">cryptoconnect</span>
+				<li class="nav-item home-item">
+					<a class="nav-link" href="">
+						<img src="imgs/cc_logo_square.png" />
+						<span class="cc_name">cryptoconnect</span>
+					</a>
 				</li>
-				<li class="charts-li">charts</li>
-				<li class="wallet-li">wallet</li>
-				<li class="exchanges-li">exchanges</li>
-				<li class="bots-li">bots</li>
+				<li class="nav-item">|</li>
+				<li class="nav-item nav-item-focused">
+					<a class="nav-link" href="">charts</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="">wallet</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="">exchanges</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="">bots</a>
+				</li>
 			</ul>
 		</nav>
 
 		<div class="grid-div">
 			<div class="cell pair-cell">
-
+				<img class="pair-logo" src="imgs/eth_logo.png" alt"eth logo" />
+				<p class="pair-id">
+					ETH/USDT
+				</p>
+				<img class="magnifying-glass-icon" src="imgs/magnifying_glass.png" />
 			</div>
-			<div class="cell exchanges-cell">
 
+			<div class="cell exchanges-cell">
+				<img class="exchanges-left-scroll-arrow" src="../imgs/scroll_arrow.png" />
+				<div class="exchanges-list">
+					<div class="binance-toggle exchange-toggle">
+						<img class="exchange-toggle-logo" src="../imgs/binance_logo.png" />
+						<span class="exchange-toggle-text-div">
+							<span class="exchange-toggle-name">BINANCE</span>
+							<span class="exchange-toggle-price">
+								$3,795.17
+							</span>
+						</span>
+					</div>
+					<div class="kraken-toggle exchange-toggle">
+						<img class="exchange-toggle-logo" src="../imgs/kraken_logo.png" />
+						<div class="exchange-toggle-text-div">
+							<span class="exchange-toggle-name">KRAKEN</span>
+							<span class="exchange-toggle-price">
+								$3,795.17
+							</span>
+						</div>
+					</div>
+					<div class="coin-base-pro-toggle exchange-toggle">
+						<img class="exchange-toggle-logo" src="../imgs/coin_base_pro_logo.png" />
+						<div class="exchange-toggle-text-div">
+							<span class="exchange-toggle-name">COIN BASE PRO</span>
+							<span class="exchange-toggle-price">
+								$3,795.17
+							</span>
+						</div>
+					</div>
+					<div class="ftx-toggle exchange-toggle">
+						<img class="exchange-toggle-logo" src="../imgs/ftx_logo.png" />
+						<div class="exchange-toggle-text-div">
+							<span class="exchange-toggle-name">FTX</span>
+							<span class="exchange-toggle-price">
+								$3,795.17
+							</span>
+						</div>
+					</div>
+				</div>
+				<img class="exchanges-right-scroll-arrow" src="../imgs/scroll_arrow.png" />
+			</div>
+
+			<div class="cell bots-cell">
+				<div class="bot-list">
+					<div></div>
+					<div></div>
+				</div>
+				<div class="btn new-bot-btn">
+					<span>
+						NEW BOT
+					</span>
+					<img class="new-bot-btn-plus-icon" src="imgs/plus.png" alt="plus sign" />
+				</div>
+			</div>
+			<div class="cell bot-settings-cell">
+				<p class="bot-info-pair">
+					<span>POSITION</span>
+					<span>BOUGHT</span>
+				</p>
+				<p class="bot-info-pair">
+					<span>TOTAL EVAL</span>
+					<span>135 USDT</span>
+				</p>
+				<p>CURRENT HOLDINGS</p>
+				<p class="current-holdings bot-info-pair">
+					<span>BASE</span>
+					<span>0.235 ETH</span>
+				</p>
+				<p class="current-holdings bot-info-pair">
+					<span>QUOTE</span>
+					<span>0.00 USDT</span>
+				</p>
+
+				<hr />
+
+				<p class="bot-info-pair">
+					<span>SANDBOX</span>
+					<span>OFF</span>
+				</p>
+				<p class="bot-info-pair">
+					<span>THRESHOLD %</span>
+					<span>1.00%</span>
+				</p>
+
+				<div class="btn disable-bot-btn">
+					DISABLE BOT
+				</div>
+			</div>
+
+			<div class="cell trades-cell">
+				<div class="trades-title">TRADES</div>
+				<div class="trades-list">
+					<div class="trades-list-heading">
+						<span>BINANCE</span>
+						<span>TIME</span>
+					</div>
+					<div class="trade">
+						<span>0.253 ETH</span>
+						<span class="trade-arrow"></span>
+						<span>789.5 USDT</span>
+						<span>1:30:29</span>
+					</div>
+					<div class="trade">
+						<span>0.253 ETH</span>
+						<span class="trade-arrow"></span>
+						<span>789.5 USDT</span>
+						<span>1:30:29</span>
+					</div>
+				</div>
+				<div class="trades-list">
+					<div class="trades-list-heading">
+						<span>BINANCE</span>
+						<span>TIME</span>
+					</div>
+					<div class="trade">
+						<span>0.253 ETH</span>
+						<span class="trade-arrow"></span>
+						<span>789.5 USDT</span>
+						<span>1:30:29</span>
+					</div>
+					<div class="trade">
+						<span>0.253 ETH</span>
+						<span class="trade-arrow"></span>
+						<span>789.5 USDT</span>
+						<span>1:30:29</span>
+					</div>
+				</div>
 			</div>
 
 			<div class="cell prices-chart-cell">
@@ -36,20 +186,9 @@
 				<div class="performance-chart"></div>
 			</div>
 
-			<div class="cell bots-cell">
-				
-			</div>
-			<div class="cell bot-settings-cell">
-				
-			</div>
-			<div class="cell trades-cell">
-				
-			</div>
 		</div>
 
-
-
 		<script type="module" src="https://unpkg.com/lightweight-charts/dist/lightweight-charts.standalone.production.js"></script>
-		<script type="module" src="/js/charter.js"></script>
+		<!-- <script type="module" src="/js/charter.js"></script> -->
 	</body>
 </html>

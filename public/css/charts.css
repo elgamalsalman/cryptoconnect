@@ -1,5 +1,249 @@
-.nav-list {
+/* <---------GRID LAYOUT---------> */
+.grid-div {
+	display: grid;
+	height: 90vh;
+	padding: 1rem;
+	padding-top: 0;
+
+	grid-template-rows: repeat(8, 1fr);
+	grid-template-columns: repeat(16, 1fr);
+	gap: 0.5rem;
+}
+
+.cell {
+	min-width: 0;
+	min-height: 0;
+	background: #ffffff10;
+	border-radius: 0.5rem;
+}
+
+.pair-cell {
+	grid-area: 1 / 1 / span 1 / span 3;
+}
+
+.exchanges-cell {
+	grid-area: 1 / 4 / span 1 / -1;
+}
+
+.bots-cell {
+	grid-area: 2 / 1 / span 3 / span 3;
+}
+
+.bot-settings-cell {
+	grid-area: 5 / 1 / -1 / span 3;
+}
+
+.trades-cell {
+	grid-area: 2 / 4 / -1 / span 3;
+}
+
+.prices-chart-cell {
+	grid-area: 2 / 7 / span 4 / -1;
+}
+
+.performance-chart-cell {
+	grid-area: 6 / 7 / -1 / -1;
+}
+
+/* <---------CELL---------> */
+.cell {
+	padding: 0.5rem;
+	color: var(--primary-text-color);
+	font-family: 'Montserrat', sans-serif;
+	font-size: 0.75rem;
+	font-weight: bold;
+}
+
+/* <---------PAIR CELL---------> */
+.pair-cell {
 	display: flex;
-	list-style: none;
-	
+	padding: 0.75rem;
+
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+}
+
+.pair-logo {
+	height: 100%;
+}
+
+.pair-id {
+	margin: 0;
+
+	font-size: 1.125rem;
+}
+
+.magnifying-glass-icon {
+	height: 50%;
+	padding-right: 0.5rem;
+}
+
+/* <---------EXCHANGES CELL---------> */
+.exchanges-cell {
+	display: flex;
+	padding: 1rem;
+
+	gap: 1rem;
+}
+
+.exchanges-left-scroll-arrow {
+	transform: rotate(180deg);
+}
+
+.exchanges-list {
+	display: flex;
+	justify-content: space-around;
+	flex-grow: 1;
+	gap: 1rem;
+}
+
+.exchange-toggle {
+	display: flex;
+	flex-grow: 1;
+	flex-basis: 0;
+	gap: 0.5rem;
+}
+
+.exchange-toggle-logo {
+	height: 100%;
+}
+
+.exchange-toggle-text-div {
+	display: inline-flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 100%;
+}
+
+/* <---------BOTS CELL---------> */
+.bots-cell {
+	display: flex;
+	padding: 1rem;
+	flex-direction: column;
+}
+
+.bot-list {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.bot-list > * {
+	height: 2.25rem;
+	border: 3px solid var(--primary-text-color-transparent);
+	border-radius: 0.5rem;
+	padding: 0.5rem;
+
+	background: url("../imgs/binance_kraken_stamp.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-clip: padding-box;
+	cursor: pointer;
+}
+
+.new-bot-btn {
+	display: flex;
+	height: 2.25rem;
+	border: 3px dashed var(--primary-text-color-transparent);
+
+	justify-content: space-between;
+	align-items: center;
+
+	background: transparent;
+	color: var(--primary-text-color-transparent);
+}
+
+.new-bot-btn-plus-icon {
+	height: 100%;
+}
+
+/* <---------BOT SETTINGS CELL---------> */
+.bot-settings-cell {
+	display: flex;
+	padding: 1.5rem;
+
+	flex-direction: column;
+	justify-content: space-between;
+	color: var(--primary-text-color-transparent);
+}
+
+.bot-settings-cell > * {
+	width: 100%;
+	margin: 0;
+}
+
+.bot-info-pair {
+	display: flex;
+	justify-content: space-between;
+}
+
+.bot-info-pair:first-of-type {
+	margin-top: 0;
+}
+
+.current-holdings {
+	padding: 0 0.5rem;
+}
+
+.disable-bot-btn {
+	background: var(--accent-red-transparent);
+	color: var(--accent-red);
+}
+
+/* <---------TRADES CELL---------> */
+.trades-cell {
+	display: flex;
+	padding: 1rem;
+	flex-direction: column;
+	gap: 1rem;
+}
+
+.trades-title {
+	color: var(--accent-blue);
+	border: 1px solid var(--accent-blue);
+	border-radius: 0.5rem;
+	padding: 0.75rem;
+
+	text-align: center;
+}
+
+.trades-list {
+	flex-basis: 0;
+	flex-grow: 1;
+}
+
+.trades-list-heading {
+	display: flex;
+	margin-bottom: 0.5rem;
+	border-radius: 0.375rem;
+	padding: 0.25rem 0.5rem;
+
+	justify-content: space-between;
+	font-size: 0.5rem;
+	letter-spacing: 0.125rem;
+	background: var(--primary-text-color-transparent);
+	color: var(--primary-text-color);
+}
+
+.trade {
+	display: flex;
+	margin-top: 0.25rem;
+
+	flex-wrap: wrap;
+	justify-content: space-between;
+	font-size: 0.625rem;
+	letter-spacing: 0.0375rem;
+	color: var(--primary-text-color-transparent);
+}
+
+.trade-arrow {
+	flex-basis: 2rem;
+	flex-shrink: 0;
+	background: url("../imgs/trades_arrow.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
 }
