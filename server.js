@@ -27,5 +27,5 @@ server.listen(config.env.port);
   const price_databases = await constructPriceDatabases();
 	streamPrices(price_databases);
 	const arbs = setupArbs(price_databases);
-	setupClientsWebsockets(price_databases, arbs);
+	// setupClientsWebsockets(price_databases, arbs);
 })();

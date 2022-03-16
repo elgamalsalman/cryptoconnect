@@ -99,22 +99,39 @@
 }
 
 .exchange-toggle {
+	position: relative;
 	display: flex;
-	flex-grow: 1;
-	flex-basis: 0;
+	height: 2rem;
 	gap: 0.5rem;
+}
+
+.exchange-toggle.selected::before {
+	content: '';
+	position: absolute;
+	height: 0.5rem;
+	width: 100%;
+	border-bottom: 0.125rem solid var(--primary-text-color);
+	bottom: -0.5rem;
+
+	background: linear-gradient(transparent, var(--primary-text-color-transparent));
 }
 
 .exchange-toggle-logo {
 	height: 100%;
+	aspect-ratio: 1;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
 }
 
 .exchange-toggle-text-div {
-	display: inline-flex;
+	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 	height: 100%;
 }
+
+.binance-toggle .exchange-toggle-logo { background-image: url("../imgs/binance_logo.png"); } .kraken-toggle .exchange-toggle-logo { background-image: url("../imgs/kraken_logo.png"); } .coin-base-pro-toggle .exchange-toggle-logo { background-image: url("../imgs/coin_base_pro_logo.png"); } .ftx-toggle .exchange-toggle-logo { background-image: url("../imgs/ftx_logo.png"); }
 
 /* <---------BOTS CELL---------> */
 .bots-cell {
@@ -247,3 +264,17 @@
 	background-repeat: no-repeat;
 	background-position: center;
 }
+
+/* <---------CHART CELLS---------> */
+.chart {
+	width: 100%;
+	height: 100%;
+	border-radius: 0.25rem;
+	background: var(--chart-background-color);
+	overflow: hidden;
+}
+
+/* <---------PRICES CHART CELL---------> */
+
+/* <---------PERFORMANCE CHART CELL---------> */
+

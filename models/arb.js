@@ -1,3 +1,4 @@
+import fs from "fs";
 import moment from "moment";
 
 class Arb {
@@ -20,7 +21,6 @@ class Arb {
   }
 
 	updateExchangePrice = (exchangeID, candles) => {
-		console.log(`arb percentage_diff : ${this.percentage_diff}`);
 		if (this.exchange1.id === exchangeID) {
 			this.exchange1.price = candles[candles.length - 1].close;
 		} else if (this.exchange2.id === exchangeID) {
@@ -76,9 +76,21 @@ class Arb {
 				});
       }
 		}
-  }
+
+		let printed_percentage_diff = this.percentage_diff;
+		if (this.exchange1.price < this.exchange2.price) printed_percentage_diff = -1 * printed_percentage_diff;
+		console.log(`${this.pair} percentage_diff : ${printed_percentage_diff}`);
+		
+		fs.appendFile(`data/${this.pair}.json`, `[${parseInt(moment.now() / 1000)},\t${this.exchange1.price},\t${this.exchange2.price},\t${printed_percentage_diff}],\n`, err => {
+			if (err) console.log(err);
+		});
+	}
 
 	makeTrade = async (trade) => {
+		fs.appendFile(`data/${this.pair}_trades.json`, `[${parseInt(moment.now() / 1000)},\t${this.exchange1.price},\t${this.exchange2.price},\t${printed_percentage_diff}],\n`, err => {
+			if (err) console.log(err);
+		});
+
 		this.trades.push(trade);
 		if (this.isSandBox === false) {
 			// register a real trade

@@ -7,7 +7,7 @@
 		{
 			"pair": "TRXBTC",
 			"isSandBox": true,
-			"trigger_percentage": 1.0,
+			"trigger_percentage": 0.6,
 			"exchange1": {
 				"id": "KRAKEN",
         "base_amount": 0.0,
@@ -37,6 +37,15 @@
 			"wsnames": {
 				"BINANCE": "trxbtc",
 				"KRAKEN": "TRX/XBT"
+			}
+		},
+		{
+			"id": "ETHBTC",
+			"base": "ETH",
+			"quote": "BTC",
+			"wsnames": {
+				"BINANCE": "ethbtc",
+				"KRAKEN": "ETH/XBT"
 			}
 		}
 	],
